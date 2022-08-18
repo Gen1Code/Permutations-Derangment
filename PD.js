@@ -160,15 +160,15 @@ var tick = (elapsedTime, multiplier) => {
     let dt = BigNumber.from(elapsedTime*multiplier); 
     let bonus = theory.publicationMultiplier; 
     let vc1 = getC1(c1.level).pow(getC1Exp(c1Exp.level));
-    let vc2 = getC2(c2.level);
+    let vc2 = (c2Term.level > 0) ? getC2(c2.level) : BigNumber.ONE;
     let vt = getT(t.level);
     t_cumulative += vt * dt;
     
     if (updateObject_flag) {        
         let vA = getA(A.level);
         let vB = getB(B.level);
-        let vC = getC(C.level);
-        let vD = getD(D.level);
+        let vC = (CTerm.level > 0) ? getC(C.level) : BigNumber.ZERO;
+        let vD = (DTerm.level > 0) ? getD(D.level) : BigNumber.ZERO;
         n = vA+vB+vC+vD;
 
         q1 = getQ1(n);
