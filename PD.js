@@ -6,7 +6,7 @@ import { Utils } from "./api/Utils";
 
 var id = "permutations_and_derangements";
 var name = "Permutations & Derangements";
-var description = "A theory about the possible arrangements and derangments of objectsz\n"+
+var description = "A theory about the possible arrangements and derangments of objects\n"+
                     "Permutations are the number of ways objects can be stored as a diferent sequence, in this case a 'very' long string of text\n"+
                     "Derangments are the number of ways all objects can be rearranged so that each object is not in its current position\n"+
                     "Note: in this theory every object is treated as individually different for derangment (only the number of object matters, the types and amount in each of them doesn't)\n"+
@@ -198,6 +198,7 @@ var postPublish = () => {
     q1 = BigNumber.ZERO;
     q2 = BigNumber.ZERO;
     updateObject_flag = true;
+    t_cumulative = BigNumber.ZERO;
 }
 
 var getPrimaryEquation = () => {
