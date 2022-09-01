@@ -154,6 +154,7 @@ var updateAvailability = () => {
     C.isAvailable = CTerm.level > 0
     D.isAvailable = DTerm.level > 0;
     c2.isAvailable = c2Term.level > 0;
+    updateObject_flag = true;
 }
 
 var tick = (elapsedTime, multiplier) => {
@@ -228,7 +229,7 @@ var getTertiaryEquation = () => {
     let result = "";
     result += "\\begin{matrix}q_1 =";
     result += q1.toString();
-    if (n < BigNumber.from(1e25)) result += ",&q_2 ="+ q2.toString();
+    result += ",&q_2 ="+ q2.toString();
     result += ",&n ="
     result += n.toString();
     result += ",&t ="
@@ -287,9 +288,9 @@ var getQ2 = (vn,vA,vB,vC,vD) => {
     if(temp != -1){
         let objs = [vA,vB,vC,vD];
         objs.splice(temp,1);
-        BigNumber.TEN.pow((objs[0]+objs[1]+objs[2])*vn.log10());
+        return BigNumber.TEN.pow((objs[0]+objs[1]+objs[2])*vn.log10());
     }else{
-        factorial(vn)/(factorial(vA)*factorial(vB)*factorial(vC)*factorial(vD));
+        return factorial(vn)/(factorial(vA)*factorial(vB)*factorial(vC)*factorial(vD));
     }
 }
 
