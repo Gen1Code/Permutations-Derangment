@@ -7,4 +7,8 @@ The CT is based on the the possible [arrangements](https://en.wikipedia.org/wiki
 Permutations are the number of ways objects can be arranged as a different sequence, in this case a 'very' long string of text. 
 Derangements are the number of ways all objects can be rearranged so that each object is not in its current position
 
+Authors: 
+Gen (Gen#3006) - Idea + Code
+XLII (XLII#0042) - Balancing
+
 ![image](https://github.com/Gen1Code/Permutations-Derangment/assets/72555054/bf5b9f40-aa32-44cc-bc6b-ec5e4c10f919)
