@@ -8,7 +8,7 @@ Permutations are the number of ways objects can be arranged as a different seque
 Derangements are the number of ways all objects can be rearranged so that each object is not in its current position
 
 Authors: 
-Gen (Gen#3006) - Idea + Code
-XLII (XLII#0042) - Balancing
+- Gen (Gen#3006) - Idea + Code
+- XLII (XLII#0042) - Balancing
 
 ![image](https://github.com/Gen1Code/Permutations-Derangment/assets/72555054/bf5b9f40-aa32-44cc-bc6b-ec5e4c10f919)
